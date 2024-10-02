@@ -44,7 +44,7 @@ app.get("/filteredimage", async (req, res) => {
       }
 
       // 4. Delete the file after sending the response
-      fs.unlinkSync(filteredPath);
+      deleteLocalFiles([filteredPath]);
     });
   } catch (error) {
     console.error(error);
